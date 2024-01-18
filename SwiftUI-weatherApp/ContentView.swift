@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             
-            BackgroundView( isNight: $isNight)
+            BackgroundView( isNight: isNight)
             
             VStack{
             
@@ -104,7 +104,7 @@ struct MainWeatherStatusView: View {
     var body: some View{
         VStack(spacing: 8){
             Image(systemName: imageName)
-                .renderingMode(.original)
+                .symbolRenderingMode(.hierarchical)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width:180, height: 180)
